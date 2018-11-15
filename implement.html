@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<title>SilverStripe Tutorial</title>
+	<link rel="shortcut icon" href="favicon.png">
+
+	<style type="text/css">
+	#pad
+	{
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+	#resolvesuc
+	{
+		text-align: center;
+	}
+div#load_screen{
+	background: #FFF;
+	opacity: 1;
+	position: fixed;
+    z-index:10;
+	top: 0px;
+	width: 100%;
+	height: 1600px;
+}
+div#load_screen > div#loading{
+	color:#FFF;
+	width:120px;
+	height:24px;
+	margin: 300px auto;
+}
+.img{
+transition: transform 1s, width 1s, height 1s;
+}
+.img:hover{
+transform: rotate(360deg);
+width: 75%;
+height: 75%;
+}
+
+#footer {
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
+}
+
+
+    </style>
+
+<script>
+window.addEventListener("load", function(){
+	var load_screen = document.getElementById("load_screen");
+	document.body.removeChild(load_screen);
+});
+</script>
+</head>
+<body>
+<div id="load_screen"><div id="loading"><center><img src ="http://www.downgraf.com/wp-content/uploads/2014/09/01-progress.gif"  width="200" height="150" alt="CAMH" /><font color="black">Loading Page</font></center></div><center>100%</center></div>
+
+<div class="navbar navbar-default">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#"><font color="#2EFEF7"><img src ="https://www.silverstripe.com/favicon-96x96.png"  width="25" height="25" /> <b> Silver</b>Stripe</a></font>
+  </div>
+  <div class="navbar-collapse collapse navbar-responsive-collapse">
+    <ul class="nav navbar-nav">
+      <li class="inactive"><a href="index.html"> Introduction</a></li>
+      </li>
+<li class="inactive"><a href="installation.html"> Installation Tutorial</a></li>
+      </li>
+<li class="active"><a href="implement.html"> Implementing SilverStripe</a></li>
+      </li>
+<li class="inactive"><a href="demo.html"> SilverStripe Demo</a></li>
+      </li>
+<li class="inactive"><a href="conclusion.html"> Conclusion</a></li>
+      </li>
+<li class="inactive"><a href="credits.html"> Credits</a></li>
+      </li>
+      </ul>
+  </div>
+
+</div>
+<h1><center>Implementation Tutorial</center></h1><br><br>
+<div style="padding-left: 10px;">
+  <style>
+  img {
+    max-width: 70%;
+    height: auto;
+    width: auto\9;
+  }
+  </style>
+  <p>
+  Making a nice looking page with SilverStripe is incredibly simple and beginner friendly. Since SilverStripe is designed for both content authors and web developers, making a beautiful website doesn't require extensive programming knowledge thanks to their easy-to-use interface. <br><br>
+  When you first install SilverStripe, you will be redirected to your new website which will most likely look like this if you kept the default theme:<br><br>
+  <img src="implementation/initial_screen.png" alt="Initial Home Page"><br><br>
+  To begin, go to the SilverStripes admin page located at [Your URL]/admin and login using the email and password you gave during the installation. Once you're logged in you will redirected to the CMS User Interface.<br><br>
+  <img src="implementation/CMS_UI.png" alt="SilverStripe's User Interface"><br><br>
+  On the left side you'll see the navigation tabs, which lets you navigate through your website's pages, files, reports, settings and access their help page. As well if you click on one of the pages, you'll enter into their editor mode where you'll see the Tree Management area which allows you to choose which file to edit. On the right of the Tree Management area is the Page Maanagement which lets you edit the page content and page information. Below that is the Publishing Bar that lets you either save a draft of your edited page for later, or publish the changes to your site. Right next to that is the Mode Swicher that lets you switch between Preview Mode and Editing Mode.<br><br>
+  <img src="implementation/CMS_UI_2.png" alt="The Page Management Interface"><br><br>
+  In order to add a new page just click on Add New in the Tree Management area, where you'll be taken to a prompt that asks you specify where to create the page and what kind of page to create. For this tutorial, we'll just select Top Level and Page and press Create.<br><br>
+  <img src="implementation/AddPage_1.png" alt="Add Page"><br><br>
+  For this tutorial we're only going to be making a simple page, so we'll keep the title as New Page and in the content we'll just put: Hello World! Now just press "Save and Publish".<br><br>
+  <img src="implementation/AddPage_2.png" alt="Editing Content"><br><br>
+  Now in order to view our newly published website we can just click the URL segment and we'll be taken to our page.<br><br>
+  If you did everything correctly it should look like this:<br><br>
+  <img src="implementation/AddPage_3.png" alt="Your new page!"><br><br>
+  In order to add an image, we just have to go to the Files tab, navigate to our Uploads folder, click upload, and drag our desired image onto the page.<br><br>
+  <img src="implementation/AddImage_1.png" alt="How to add an image"><br><br>
+  Navigate back to your New Page and click on Insert Media<br><br>
+  <img src="implementation/AddImage_2.png" alt="Click on Insert Media"><br><br>
+  Then on the prompt, navigate to From the CMS and select the image. Click on insert and then Save and Publish your page.<br><br>
+  <img src="implementation/AddImage_3.png" alt="Click on Insert Media"><br><br>
+  Now if you go to your page it should look something like this!<br><br>
+  <img src="implementation/AddImage_4.png" alt="Your updated page"><br><br>
+  If you want to add a new theme, just go <a href="http://addons.silverstripe.org/add-ons?type=theme&view=expanded">here</a> and search for the theme you want. Once you've found a theme you like, download it from their GitHub repo and extract the files to the themes folder in your silverstripes folder. For example, I downloaded this <a href="https://github.com/tractorcow/silverstripe-metro">theme</a> and put it in my themes folder. Now if I want to change the theme, all I have to do is go to Settings, select the theme I want, and save.<br><br>
+  <img src="implementation/AddTheme.png" alt="How to select a theme"><br><br>
+  Now my page looks like this:<br><br>
+  <img src="implementation/Final.png" alt="Its dat boiii!"><br><br>
+  For more tutorials, go <a href="https://www.silverstripe.org/learn/lessons/">here</a>.
+  </p>
+</div>
+<br>
+</body>
+<br>
+<br>
+<br>
+<div id="footer">Web Systems Development (CPS530)</div>
+
+</html>

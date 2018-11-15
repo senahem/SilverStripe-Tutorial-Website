@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<title>SilverStripe Tutorial</title>
+	<link rel="shortcut icon" href="favicon.png">
+
+	<style type="text/css">
+	#pad
+	{
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+	#resolvesuc
+	{
+		text-align: center;
+	}
+div#load_screen{
+	background: #FFF;
+	opacity: 1;
+	position: fixed;
+    z-index:10;
+	top: 0px;
+	width: 100%;
+	height: 1600px;
+}
+div#load_screen > div#loading{
+	color:#FFF;
+	width:120px;
+	height:24px;
+	margin: 300px auto;
+}
+.img{
+transition: transform 1s, width 1s, height 1s;
+
+}
+.img:hover{
+transform: rotate(360deg);
+width: 75%;
+height: 75%;
+}
+
+#footer {
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
+}
+  @import "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css";
+@import "http://fonts.googleapis.com/css?family=Quicksand:700,400";
+
+.box > .icon { text-align: center; position: relative; }
+.box > .icon > .image { position: relative; z-index: 2; margin: auto; width: 88px; height: 88px; border: 8px solid white; line-height: 88px; border-radius: 50%; background: rgb(170,196,196); vertical-align: middle; }
+.box > .icon:hover > .image { background: #6CB4C4; }
+.box > .icon > .image > i { font-size: 36px !important; color: #fff !important; }
+.box > .icon:hover > .image > i { color: black !important; }
+.box > .icon > .info { margin-top: -24px; background: rgba(0, 0, 0, 0.04); border: 1px solid #e0e0e0; padding: 15px 0 10px 0; }
+.box > .icon:hover > .info { background: rgba(0, 0, 0, 0.04); border-color: #e0e0e0; color: blue; }
+.box > .icon > .info > h3.title { font-family: "Quicksand",sans-serif !important; font-size: 28px; color: #222; font-weight: 500; }
+.box > .icon > .info > p { font-family: "Quicksand",sans-serif !important; font-size: 15px; color: #666; line-height: 1.5em; margin: 20px;}
+.box > .icon > .info > .more a { font-family: "Quicksand",sans-serif !important; font-size: 12px; color: #222; line-height: 12px; text-transform: uppercase; text-decoration: none; }
+.box > .icon:hover > .info > .more > a { color: black; padding: 6px 8px; background-color: #63B76C; }
+.box .space { height: 2px; background-color: #6CB4C4;}
+.btn-default { font-family: "Quicksand",sans-serif; background-color: #75b1ae; color: #FFFFFF;}
+.btn-default:hover { background-color: #FFFFFF; color: black;}
+
+ 
+
+    </style>
+
+<script>
+window.addEventListener("load", function(){
+	var load_screen = document.getElementById("load_screen");
+	document.body.removeChild(load_screen);
+});
+</script>
+</head>
+<body>
+<div id="load_screen"><div id="loading"><center><img src ="http://www.downgraf.com/wp-content/uploads/2014/09/01-progress.gif"  width="200" height="150" alt="CAMH" /><font color="black">Loading Page</font></center></div><center>100%</center></div>
+
+<div class="navbar navbar-default">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#"><font color="#2EFEF7"><img src ="https://www.silverstripe.com/favicon-96x96.png"  width="25" height="25" /> <b> Silver</b>Stripe</a></font>
+  </div>
+  <div class="navbar-collapse collapse navbar-responsive-collapse">
+    <ul class="nav navbar-nav">
+      <li class="inactive"><a href="index.html"> Introduction</a></li>
+      </li>
+<li class="active"><a href="installation.html"> Installation Tutorial</a></li>
+      </li>
+<li class="inactive"><a href="implement.html"> Implementing SilverStripe</a></li>
+      </li>
+<li class="inactive"><a href="demo.html"> SilverStripe Demo</a></li>
+      </li>
+<li class="inactive"><a href="conclusion.html"> Conclusion</a></li>
+      </li>
+<li class="inactive"><a href="credits.html"> Credits</a></li>
+      </li>
+      </ul>
+  </div>
+
+</div>
+<h1><center>Installation Tutorial</center></h1>
+<br>
+<br>
+<p> &nbsp;&nbsp;Installing SilverStripe on a webhost is actually pretty simple. We shall demonstrate it below:</p>
+<ol start="1">
+<li>Firstly, you will need either a localhost or a web host. We chose a free webhost called 000webhost. We did the basics such as setting up an account and a domain name.</p>
+</li>
+</ol> 
+<div>
+<ol start="2">
+<li>Next, you will have to download the SilverStripe CMS files. This can be done by navigating to <a href="http://www.silverstripe.org/download/">www.silverstripe.org/download/</a> and choosing Download ZIP.</li>
+<br>
+<img style="max-width: 80%; height: 80; width: auto\9;" src="installation/11.png" alt="Step 2">
+</ol>
+</div>
+<ol start="3">
+<li>Next, navigate to the file manager on your webhost and open public_html.
+</li> 
+ 
+<br>
+<img style="max-width: 80%; height: auto; width: auto\9;" src="installation/2.png" alt="Step 3">
+</ol> 
+<ol start="4">
+<li>Upload the downloaded ZIP file to the directory.
+</li>
+<br> 
+<img style="max-width: 65%; height: 50; width: auto\9;" src="installation/3.png" alt="Step 4">
+</ol>
+<ol start="5">
+<li>After that, right click the ZIP file you uploaded and click extract.
+</li>
+<br>
+<img style="max-width: 65%; height: 50; width: auto\9;" src="installation/4.png" alt="Step 5">
+</ol>
+<ol start="6"> 
+<li>Next move all the extracted files from the public_html directory. You may now delete the redundant folder where the files were originally extracted to as well as the ZIP file.</li>
+<br> 
+<img style="max-width: 80%; height: 80; width: auto\9;" src="installation/5.png" alt="Step 6">
+</ol>
+<ol start="7">
+<li>Now that we have our CMS files in our file repository, we can proceed to make a MySQL database.</li>
+<br>
+<img style="max-width: 80%; height: 80; width: auto\9;" src="installation/6.png" alt="Step 7">
+</ol>
+<ol start="8">
+<li>Click new database and enter new credentials for your new database. Make sure to enable all privileges and permissions.</li>
+<br>
+<img style="max-width: 65%; height: 50; width: auto\9;" src="installation/7.png" alt="Step 8">
+</ol> 
+<ol start="9">
+<li>Now that we have both the CMS files as well as our database set up, we can proceed to install SilverStripe. Navigate to [Your URL]/install.php. You may get a few errors at first until you enter your database information.</li>
+<br>
+<img style="max-width: 80%; height: 80; width: auto\9;" src="installation/12.png" alt="Step 9">
+</ol>
+<ol start="10">
+<li>Next, scroll to the bottom and click Install SilverStripe.</li>
+<br>
+<img style="max-width: 80%; height: 80; width: auto\9;" src="installation/9.png" alt="Step 10">
+</ol>
+<ol start="11">
+<li>SilverStripe will now install and will be ready to use.</li>
+<br>
+<img style="max-width: 80%; height: 80; width: auto\9;" src="installation/10.png" alt="Step 11">
+</ol>
+ 
+<br>
+<hr>
+</body>
+<br>
+<br>
+<br>
+
+<div id="footer">Web Systems Development (CPS530)</div>
+
+</html>

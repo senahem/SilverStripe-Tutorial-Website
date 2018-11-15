@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<title>SilverStripe Tutorial</title>
+	<link rel="shortcut icon" href="favicon.png">
+
+	<style type="text/css">
+        body{
+         text-align: center;
+        }
+	#pad
+	{
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+	#resolvesuc
+	{
+		text-align: center;
+	}
+
+div#load_screen{
+	background: #FFF;
+	opacity: 1;
+	position: fixed;
+    z-index:10;
+	top: 0px;
+	width: 100%;
+	height: 1600px;
+}
+div#load_screen > div#loading{
+	color:#FFF;
+	width:120px;
+	height:24px;
+	margin: 300px auto;
+}
+.img{
+transition: transform 1s, width 1s, height 1s;
+}
+.img:hover{
+transform: rotate(360deg);
+width: 75%;
+height: 75%;
+}
+
+#footer {
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
+}
+
+
+#mainbox{
+font-size: 24px;
+text-align:left;
+padding-left:30%;
+padding-right:15%;
+
+}
+
+img  {
+max-width:75%;
+height:auto;
+width:auto\9;
+}
+
+    
+ @import "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css";
+@import "http://fonts.googleapis.com/css?family=Quicksand:700,400";
+
+.box > .icon { text-align: center; position: relative; }
+.box > .icon > .image { position: relative; z-index: 2; margin: auto; width: 88px; height: 88px; border: 8px solid white; line-height: 88px; border-radius: 50%; background: rgb(170,196,196); vertical-align: middle; }
+.box > .icon:hover > .image { background: #6CB4C4; }
+.box > .icon > .image > i { font-size: 36px !important; color: #fff !important; }
+.box > .icon:hover > .image > i { color: blue !important; }
+.box > .icon > .info { margin-top: -24px; background: rgba(0, 0, 0, 0.04); border: 1px solid #e0e0e0; padding: 15px 0 10px 0; }
+.box > .icon:hover > .info { background: rgba(0, 0, 0, 0.04); border-color: #e0e0e0; color: blue; }
+.box > .icon > .info > h3.title { font-family: "Quicksand",sans-serif !important; font-size: 28px; color: #222; font-weight: 500; }
+.box > .icon > .info > p { font-family: "Quicksand",sans-serif !important; font-size: 15px; color: #666; line-height: 1.5em; margin: 20px;}
+.box > .icon > .info > .more a { font-family: "Quicksand",sans-serif !important; font-size: 12px; color: #222; line-height: 12px; text-transform: uppercase; text-decoration: none; }
+.box > .icon:hover > .info > .more > a { color: #006eff; padding: 6px 8px; background-color: #63B76C; }
+.box .space { height: 2px; background-color: #6CB4C4;}
+.btn-default { font-family: "Quicksand",sans-serif; background-color: #75b1ae; color: #006eff;}
+.btn-default:hover { background-color: #006eff; color: black;}
+
+ 
+
+    </style>
+
+<script>
+window.addEventListener("load", function(){
+	var load_screen = document.getElementById("load_screen");
+	document.body.removeChild(load_screen);
+});
+</script>
+</head>
+<body>
+<div id="load_screen"><div id="loading"><center><img src ="http://www.downgraf.com/wp-content/uploads/2014/09/01-progress.gif"  width="200" height="150" alt="CAMH" /><font color="black">Loading Page</font></center></div><center>100%</center></div>
+
+<div class="navbar navbar-default">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#"><font color="#2EFEF7"><img src ="https://www.silverstripe.com/favicon-96x96.png"  width="25" height="25" /> <b> Silver</b>Stripe</a></font>
+  </div>
+  <div class="navbar-collapse collapse navbar-responsive-collapse">
+    <ul class="nav navbar-nav">
+      <li class="inactive"><a href="index.html"> Introduction</a></li>
+      </li>
+<li class="inactive"><a href="installation.html"> Installation Tutorial</a></li>
+      </li>
+<li class="inactive"><a href="implement.html"> Implementing SilverStripe</a></li>
+      </li>
+<li class="inactive"><a href="demo.html"> SilverStripe Demo</a></li>
+      </li>
+<li class="active"><a href="conclusion.html"> Conclusion</a></li>
+      </li>
+<li class="inactive"><a href="credits.html"> Credits</a></li>
+      </li>
+      </ul>
+  </div>
+
+</div>
+<div>
+<img src="stars.png"/>
+</div>
+
+<br><br><br><br>
+
+<div class="container">
+	<div class="row">
+     
+    	<div class="">
+			<div class="box">							
+				<div class="icon">
+					
+					<div class="info">
+					<h1 class="title">Conclusion</h3>
+<ul id="mainbox">
+<li>Easy to install and configure. <ul>
+    <li>Difficult to troubleshoot errors.</li>
+</ul></li>
+
+<li>Easy to create and edit pages.</li>
+<li>Performs up to expectations.</li>
+<li>Not as popular compared to its competitors (ex WordPress).</li>
+<li>Strikes a good balance between complexity and simplicity.</li>
+<li>Themes can be added or changed with ease</li>
+<li>Requires general understanding of a few programming languages for more complex websites (ex HTML,CSS,PHP)</li>
+<li>Small learning curve compared to HTML & CSS</li>
+<li>No regrets in choosing SilverStripe.</li>
+
+</ul>
+			</div>
+				</div>
+				<div class="space"></div>
+			</div> 
+		</div>
+
+
+<br>
+</body>
+<br>
+<br>
+<br>
+<div id="footer">Web Systems Development (CPS530)</div>
+
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<title>SilverStripe Tutorial</title>
+	<link rel="shortcut icon" href="favicon.png">
+
+	<style type="text/css">
+	#pad
+	{
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+	#resolvesuc
+	{
+		text-align: center;
+	}
+div#load_screen{
+	background: #FFF;
+	opacity: 1;
+	position: fixed;
+    z-index:10;
+	top: 0px;
+	width: 100%;
+	height: 1600px;
+}
+div#load_screen > div#loading{
+	color:#FFF;
+	width:120px;
+	height:24px;
+	margin: 300px auto;
+}
+.img{
+transition: transform 1s, width 1s, height 1s;
+}
+.img:hover{
+transform: rotate(360deg);
+width: 75%;
+height: 75%;
+}
+#listfix{
+text-align: left;
+}
+#listpad
+{
+text-align:left;
+padding-left:20%;
+}
+#footer {
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
+}
+h5{
+padding-left: 10px;
+padding-right: 10px;
+}
+  @import "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css";
+@import "http://fonts.googleapis.com/css?family=Quicksand:700,400";
+
+.box > .icon { text-align: center; position: relative; }
+.box > .icon > .image { position: relative; z-index: 2; margin: auto; width: 88px; height: 88px; border: 8px solid white; line-height: 88px; border-radius: 50%; background: rgb(170,196,196); vertical-align: middle; }
+.box > .icon:hover > .image { background: #6CB4C4; }
+.box > .icon > .image > i { font-size: 36px !important; color: #fff !important; }
+.box > .icon:hover > .image > i { color: black !important; }
+.box > .icon > .info { margin-top: -24px; background: rgba(0, 0, 0, 0.04); border: 1px solid #e0e0e0; padding: 15px 0 10px 0; }
+.box > .icon:hover > .info { background: rgba(0, 0, 0, 0.04); border-color: #e0e0e0; color: blue; }
+.box > .icon > .info > h3.title { font-family: "Quicksand",sans-serif !important; font-size: 28px; color: #222; font-weight: 500; }
+.box > .icon > .info > p { font-family: "Quicksand",sans-serif !important; font-size: 15px; color: #666; line-height: 1.5em; margin: 20px;}
+.box > .icon > .info > .more a { font-family: "Quicksand",sans-serif !important; font-size: 12px; color: #222; line-height: 12px; text-transform: uppercase; text-decoration: none; }
+.box > .icon:hover > .info > .more > a { color: black; padding: 6px 8px; background-color: #63B76C; }
+.box .space { height: 2px; background-color: #6CB4C4;}
+.btn-default { font-family: "Quicksand",sans-serif; background-color: #75b1ae; color: #FFFFFF;}
+.btn-default:hover { background-color: #FFFFFF; color: black;}
+
+ 
+
+    </style>
+
+<script>
+window.addEventListener("load", function(){
+	var load_screen = document.getElementById("load_screen");
+	document.body.removeChild(load_screen);
+});
+</script>
+</head>
+<body>
+<div id="load_screen"><div id="loading"><center><img src ="http://www.downgraf.com/wp-content/uploads/2014/09/01-progress.gif"  width="200" height="150" alt="CAMH" /><font color="black">Loading Page</font></center></div><center>100%</center></div>
+
+<div class="navbar navbar-default">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#"><font color="#2EFEF7"><img src ="https://www.silverstripe.com/favicon-96x96.png"  width="25" height="25" /> <b> Silver</b>Stripe</a></font>
+  </div>
+  <div class="navbar-collapse collapse navbar-responsive-collapse">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.html"> Introduction</a></li>
+      </li>
+<li class="inactive"><a href="installation.html"> Installation Tutorial</a></li>
+      </li>
+<li class="inactive"><a href="implement.html"> Implementing SilverStripe</a></li>
+      </li>
+<li class="inactive"><a href="demo.html"> SilverStripe Demo</a></li>
+      </li>
+<li class="inactive"><a href="conclusion.html"> Conclusion</a></li>
+      </li>
+<li class="inactive"><a href="credits.html"> Credits</a></li>
+      </li>
+      </ul>
+  </div>
+
+</div>
+
+
+<div class="jumbotron">
+  <h1 class="display-3">Welcome to SilverStripe</h1>
+<br>
+  <p class="lead">SilverStripe provides a framework built around PHP, with a nice GUI that allows the user to program complex and simple websites. SilverStripe provides easy code production and adaptability because of its Model-view-controller architecture.</p>
+  <hr class="my-2">
+  <p>Since SilverStripe is an entirely open source CMS platform, it allows collaborative development as well as constant updating of the system by not just the original developer but users also. It is extremely dynamic and has been constantly remodeled and developed to address new issues as well as improve efficiency and user experience.</p>
+  <p class="lead">
+  </p>
+</div>
+
+<br>
+ <div class="container">
+	<div class="row">
+    	<div class="col-sx-12 col-sm-6 col-lg-6">
+			<div class="box">							
+				<div class="icon">
+					<div class="image"><i class="fa fa-thumbs-o-up"></i></div>
+					<div class="info">
+						<h3 class="title">Popularity</h3>
+						<p>
+							<img src="popularity.PNG" alt="popularity" style="width:438.5px;height:229px;">
+<ul id="listfix">
+<li>1 million+ Downloads</li>
+<li>380+ Freelancer and Web companies on hand</li>
+<li>24,000+ Community members</li>
+<li>3,600 Showcased SilverStripe websites</li>
+</ul>
+						</p>
+					</div>
+				</div>
+				<div class="space"></div>
+			</div> 
+		</div>
+			
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+			<div class="box">							
+				<div class="icon">
+				    <div class="image"><i class="fa fa-wrench"></i></div>
+					<div class="info">
+    					<h3 class="title">Technological bases</h3>
+						<p><br>
+			<ul id="listfix">
+				<li>The SilverStripe Framework as with the rest of the platform is written in PHP and takes advantage of object oriented design capabilities. Furthermore, it's based on today's modern programming techniques including model-view-controller and object-relational mapper.</li>
+<br><li>SilverStripe generates a markup language using custom templates based on W3C HTML5 which offer simple placeholders and conditional logic.</li><br>
+<li>The SilverStripe Framework approach is stated to remove complexity for beginners and also offer more flexibility for experienced developers</li>
+<hr>
+<h4>Requirements:</h5>
+<li>Apache v1.3.19+</li>
+<li>MySQL v5.0+</li>
+<li>PHP 5.3.2+</li>
+						</p>
+					</div>
+</ul>
+				<div class="space"></div>
+			</div> 
+		</div>
+			
+      	</div>
+</div>
+<br>
+<hr>
+<br>
+<div class="container">
+	<div class="row">
+    	<div class="col-sx-12 col-sm-6 col-lg-6">
+			<div class="box">							
+				<div class="icon">
+					<div class="image"><i class="fa fa-star-half-o"></i></div>
+					<div class="info">
+						<h3 class="title">Strengths and Weaknesses</h3>
+						<p>
+							<h4>Advantages:</h4><hr>
+<ul id="listfix">
+<li>The Framework provides a flexible foundation</li>
+
+<li>The template is perfect for complicated and simple layouts</li>
+<li>The framework is intuitive and beautiful</li>
+<li>Powerful, easy and consistent interface for managing data</li>
+<li>Quick and easy installation process</li>
+<li>Provides Drag-and-drop structuring</li>
+<li>Low memory requirements (48 MB)</li>
+<li>The user can control all CMS extensions with the admin panel</li><br>
+</ul>
+							<h4>Disadvantages:</h4><hr>
+<ul id="listfix">
+<li>You will need a general understanding of few programming languages and technical aspects unlike other frameworks</li>
+<li>Premium themes, add-ons, and modules are virtually nonexistent.</li>
+<li>Very little information available online for the CMS, thus challenging for a beginners</li>
+
+
+						</p>
+</ul>
+					</div>
+				</div>
+				<div class="space"></div>
+			</div> 
+		</div>
+			
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+			<div class="box">							
+				<div class="icon">
+				    <div class="image"><i class="fa fa-users"></i></div>
+					<div class="info">
+    					<h3 class="title">Who uses SilverStripe?</h3>
+						<p>
+							<h5>Below are a list of Companies that take advantage of the framework SilverStripe and integrate it onto their website:</h5>
+<ul id="listpad">
+<li>Lenovo</li>
+<li>Forbes</li>
+<li>Christchurch City Council</li>
+<li>Westpac One Online Banking</li>
+<li>Skinny Mobile</li>
+<li>New Zealand Government Websites</li>
+<li>Westpac</li>
+</ul>
+<br>
+<li>SilverStripe appeals to roles of content authors as well as experienced website designers/developers who program. The CMS allows technical website development tasks to be performed inside the GUI and also a framework that offers simple navigation and control for those who have little programming experience.</li><br>
+
+
+						</p>
+					</div>
+				<div class="space"></div>
+			</div> 
+		</div>
+			
+      	</div>
+</div>
+<br>
+</body>
+<br>
+<br>
+<br>
+<div id="footer">Web Systems Development (CPS530)</div>
+
+</html>
